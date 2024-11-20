@@ -1,7 +1,7 @@
 import { getCustomer } from "@/lib/queries/getCustomer";
 import { BackButton } from "@/components/BackButton";
 import * as Sentry from "@sentry/nextjs"
-import CustomerForm from "./CustomForm";
+import CustomerForm from "./CustomerForm";
 
 export default async function CustomerFormPage({
   searchParams,
