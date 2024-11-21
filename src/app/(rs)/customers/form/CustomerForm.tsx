@@ -3,16 +3,16 @@
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Form } from "@/components/ui/form"
-// import { Button } from "@/components/ui/Button"
 import { InputWithLabel } from "@/components/inputs/InputWithLabel"
 import {
   insertCustomerSchema,
-  // selectCustomerSchema,
   type insertCustomerSchemaType,
   type selectCustomerSchemaType
 } from "@/lib/zod-schema/customer"
 import { Button } from "@/components/ui/Button"
 import { TextAreaWithLabel } from "@/components/inputs/TextAreaWithLabel"
+import { SelectWithLabel } from "@/components/inputs/SelectWithLabel"
+import { states } from "../../../../../constants/StatesArray"
 
 type Props = {
   customer?: selectCustomerSchemaType,
@@ -76,6 +76,11 @@ export default function CustomerForm({ customer }: Props) {
               fieldTitle="City"
               nameInSchema="city"
             />
+            <SelectWithLabel<insertCustomerSchemaType>
+              fieldTitle="State"
+              nameInSchema="state"
+              data={states}
+            />
           </div>
           <div className="flex flex-col gap-4 w-full max-w-xs">
             <InputWithLabel<insertCustomerSchemaType>
@@ -99,8 +104,8 @@ export default function CustomerForm({ customer }: Props) {
               <Button
                 type="submit"
                 className="w-3/4"
-                title="Save"
                 variant="default"
+                title="Save"
               >
                 Save
               </Button>

@@ -7,5 +7,4 @@ export async function getCustomer(id: number) {
     .from(customers)
     .where(eq(customers.id, id))
   return customer[0]
-
 }
