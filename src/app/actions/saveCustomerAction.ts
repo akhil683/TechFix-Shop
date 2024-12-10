@@ -27,6 +27,7 @@ export const saveCustomerAction = actionClient
     const isAuth = await isAuthenticated()
     if (!isAuth) redirect("/login")
 
+    // Create new Customer
     if (customer.id === 0) {
       const result = await db.insert(customers).values({
         firstName: customer.firstName,
@@ -44,7 +45,7 @@ export const saveCustomerAction = actionClient
       return { message: `Customer ID #${result[0].insertedId} created successfully` }
     }
 
-    //Existing Customer
+    //Update Existing Customer
     const result = await db.update(customers)
       .set({
         firstName: customer.firstName,
