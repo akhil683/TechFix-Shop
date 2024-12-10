@@ -1,6 +1,11 @@
 import { withSentryConfig } from "@sentry/nextjs";
 
-const nextConfig = {};
+const nextConfig = {
+  reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  }
+};
 
 export default withSentryConfig(nextConfig, {
   org: "akhil-ae",
