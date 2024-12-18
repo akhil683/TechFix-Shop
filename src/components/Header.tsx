@@ -8,10 +8,10 @@ import { NavButtonMenu } from "./NavButtonMenu";
 
 export default function Header() {
   return (
-    <header className="bg-background h-12 p-2 border-b sticky top-0 z-20">
+    <header className="bg-background h-12 p-2 border-b sticky top-0 z-50">
       <div className="flex h-8 items-center justify-between w-full">
-        <div className="flex items-center gap-2">
-          <NavButton href="/home" label="Home" icon={HomeIcon} />
+        <div className="flex items-center justice gap-2">
+          <NavButton href="/" label="Home" icon={HomeIcon} />
           <Link
             href={"/home"}
             className="flex justify-center items-center gap-2 ml-0 "

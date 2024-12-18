@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import Image from "next/image";
-import imageUrl1 from "../../public/images/home-img.jpg"
+import imageUrl1 from "../../public/images/repair-bg.jpg"
 import { type LucideIcon } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 
@@ -21,7 +21,7 @@ export default function FeatureCard({ icon: Icon, title, description, imageUrl }
   console.log(imageUrl)
   return (
     <motion.div variants={fadeInUp}>
-      <Card className="bg-gray-600 border-gray-800 hover:border-gray-300 transition-colors">
+      <Card className="bg-gray-900 border-gray-800 hover:border-gray-300 transition-colors">
         <CardHeader>
           <div className="flex flex-col items-center mb-4">
             <div className="relative w-24 h-24 rounded-full overflow-hidden mb-4 border-2 border-white">

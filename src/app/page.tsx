@@ -5,7 +5,7 @@ import { ClipboardList, Users, Wrench } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import FeatureCard from '@/components/FeatureCard'
-import imageUrl from "../../public/images/home-img.jpg"
+import imageUrl from "../../public/images/repair-bg.jpg"
 import { LoginLink } from '@kinde-oss/kinde-auth-nextjs'
 
 const fadeInUp = {
@@ -42,7 +42,7 @@ export default function RepairShopLanding() {
 
       {/* Hero Section */}
       <motion.header
-        className="relative text-center py-32 px-4 overflow-hidden"
+        className="relative text-center py-32 flex justify-center items-center px-4 overflow-hidden"
         variants={fadeInUp}
         initial="initial"
         animate="animate"
@@ -57,7 +57,7 @@ export default function RepairShopLanding() {
             className="mix-blend-overlay"
           />
         </div>
-        <div className="relative z-10">
+        <div className="relative">
           <h1 className="text-5xl font-bold mb-4 text-white">Streamline Your Repair Shop Management</h1>
           <p className="text-xl mb-8 text-gray-300">Efficiently manage employees and repair tickets with our all-in-one solution</p>
           <Button size="lg" className="bg-white text-black hover:bg-gray-200" asChild>

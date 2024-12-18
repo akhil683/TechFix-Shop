@@ -80,11 +80,11 @@ export default function CustomerForm({ customer }: Props) {
   }
 
   return (
-    <div className="flex flex-col gap-1 sm:px-8">
+    <div className="flex mt-6 flex-col gap-1 sm:px-8">
       <DisplayServerActionResponse result={saveResult} />
       <div>
-        <h2 className="text-2xl font-bold">
-          {customer?.id ? "Edit" : "New"}
+        <h2 className="text-2xl font-bold dark:text-white text-orange-600 mb-2">
+          {customer?.id ? "Edit" : "New"} {" "}
           Customer {customer?.id ? `#${customer.id}` : "Form"}
         </h2>
       </div>

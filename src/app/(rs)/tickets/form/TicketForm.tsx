@@ -85,10 +85,10 @@ export default function TicketForm({
   }
 
   return (
-    <div className="flex flex-col gap-1 sm:px-8">
+    <div className="flex flex-col mt-6 justify-center gap-1 sm:px-8">
       <DisplayServerActionResponse result={saveResult} />
       <div>
-        <h2 className="text-2xl font-bold">
+        <h2 className="text-2xl font-bold mb-2 dark:text-white text-orange-500">
           {ticket?.id && isEditable
             ? `Edit Ticket # ${ticket.id}`
             : ticket?.id
