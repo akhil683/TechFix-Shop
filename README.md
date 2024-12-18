@@ -96,7 +96,7 @@ DATABASE_URL=
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/techfix-repari.git
+   git clone https://github.com/akhil683/TechFix-Shop.git
    cd techfix-repari
    ```
 
