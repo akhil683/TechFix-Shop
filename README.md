@@ -1,10 +1,10 @@
 # TechFix Repair
 
-- Hi, My name is Akhil and this is the comprehensive documentation of my project.
-- TechFix Repair is a web application designed to help repair shops efficiently manage their employees and customers. With robust authentication, authorization, and data management features, this project provides a seamless user experience for both managers and employees.
+![Landing Page](/public/readme/hero.png)
+
+TechFix Repair is a web application designed to help repair shops efficiently manage their employees and customers. With robust authentication, authorization, and data management features, this project provides a seamless user experience for both managers and employees.
 
 ---
-![Landing Page](/public/readme/hero.png)
 
 ## Features
 
@@ -37,17 +37,15 @@
 - **ORM**: [Drizzle ORM](https://github.com/drizzle-team/drizzle-orm) for database operations.
 - **Database**: [NeonDB](https://neon.tech/) for hosting PostgreSQL database.
 
+### Error Tracking
+- Integrated with [Sentry](https://sentry.io/) for monitoring and error tracking.
+
+### Data Polling
+- Added data polling for live updates in ticket and customer tables, enhancing user experience by displaying the latest data without manual refreshes.
+
 ### Theming
 - Supports **Dark**, **Light**, and **System Preferred** themes using [next-themes](https://github.com/pacocoursey/next-themes).
 
-### Animations
-- Smooth UI transitions with [Motion](https://www.motion.dev).
-
-### UI Components
-- Built with [Shadcn UI](https://shadcn.dev/) for reusable and accessible components.
-
-### Error Tracking
-- Integrated with [Sentry](https://sentry.io/) for monitoring and error tracking.
 
 ---
 
