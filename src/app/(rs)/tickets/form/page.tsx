@@ -94,10 +94,14 @@ export default async function TicketFormPage({
           id: user.email!,
           description: user.email!,
         })) : []
-        return <TicketForm customer={customer} techs={techs} />
+        return <TicketForm
+          isManager={isManager}
+          customer={customer}
+          techs={techs}
+        />
 
       } else {
-        return <TicketForm customer={customer} />
+        return <TicketForm isManager={isManager} customer={customer} />
       }
     }
     //Edit ticket form
@@ -126,10 +130,20 @@ export default async function TicketFormPage({
           id: user.email!,
           description: user.email!,
         })) : []
-        return <TicketForm customer={customer} ticket={ticket} techs={techs} />
+        return <TicketForm
+          isManager={isManager}
+          customer={customer}
+          ticket={ticket}
+          techs={techs}
+        />
       } else {
         const isEditable = user.email?.toLowerCase() === ticket.tech.toLowerCase()
-        return <TicketForm customer={customer} ticket={ticket} isEditable={isEditable} />
+        return <TicketForm
+          isManager={isManager}
+          customer={customer}
+          ticket={ticket}
+          isEditable={isEditable}
+        />
       }
 
     }

@@ -22,5 +22,6 @@ export async function getCustomerSearchResults(searchText: string) {
         ${`%${searchText.toLowerCase().replace(' ', '%')}%`}
       `
     ))
+    .orderBy(customers.firstName)
   return results
 }
