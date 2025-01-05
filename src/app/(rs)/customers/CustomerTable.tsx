@@ -34,6 +34,7 @@ type Props = {
 }
 
 export default function CustomerTable({ data }: Props) {
+
   const columnHeadersArray: Array<keyof selectCustomerSchemaType> = [
     "firstName",
     "lastName",

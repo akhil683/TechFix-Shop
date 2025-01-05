@@ -59,7 +59,7 @@ export default function TicketTable({ data }: Props) {
   const pageIndex = useMemo(() => {
     const page = searchParams.get("page")
     return page ? parseInt(page) - 1 : 0
-  }, [searchParams])
+  }, [searchParams.get("page")]) // eslint-disable-line
 
   const columnHeadersArray: Array<keyof RowType> = [
     'ticketDate',
