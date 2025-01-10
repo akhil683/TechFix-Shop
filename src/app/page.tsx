@@ -1,123 +1,141 @@
-'use client'
+import { Badge } from "@/components/ui/badge"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { ClipboardList, Users, BarChart, Phone, Laptop } from 'lucide-react'
+import { Button } from "@/components/ui/Button"
+import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components"
 
-import { Button } from '@/components/ui/Button'
-import { ClipboardList, Users, Wrench } from 'lucide-react'
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import FeatureCard from '@/components/FeatureCard'
-import imageUrl from "../../public/images/repair-bg.jpg"
-import { LoginLink } from '@kinde-oss/kinde-auth-nextjs'
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 60 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
-}
-
-const stagger = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-}
-
-export default function RepairShopLanding() {
+export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-gray-100">
-      {/* Navigation */}
-      <motion.nav
-        className="flex items-center justify-between p-4 bg-black bg-opacity-90 backdrop-blur-md fixed w-full z-10"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="text-2xl font-bold text-white">TechFix Shop</div>
-        <div>
-          <Button className="bg-white text-black hover:bg-gray-200">
-            <LoginLink>Sign In</LoginLink>
-          </Button>
-        </div>
-      </motion.nav>
+    <div className="min-h-screen text-white">
 
-      {/* Hero Section */}
-      <motion.header
-        className="relative text-center py-32 flex justify-center items-center px-4 overflow-hidden"
-        variants={fadeInUp}
-        initial="initial"
-        animate="animate"
-      >
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-gray-800 opacity-90"></div>
-          <Image
-            src={imageUrl}
-            alt="Repair Shop Background"
-            layout="fill"
-            objectFit="cover"
-            className="mix-blend-overlay"
-          />
-        </div>
-        <div className="relative">
-          <h1 className="text-5xl font-bold mb-4 text-white">Streamline Your Repair Shop Management</h1>
-          <p className="text-xl mb-8 text-gray-300">Efficiently manage employees and repair tickets with our all-in-one solution</p>
-          <Button size="lg" className="bg-white text-black hover:bg-gray-200" asChild>
-            <LoginLink>Get Started</LoginLink>
-          </Button>
-        </div>
-      </motion.header>
+      {/* Main Content */}
+      <div className="relative">
+        {/* Header */}
+        <header className="border-b border-white/10">
+          <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <span className="text-xl font-bold">TechFix Repair</span>
+            </div>
+            <div className="flex items-center gap-4">
+              {/* <Link href="/about" className="hover:text-purple-400">About</Link> */}
+              {/* <Link href="/features" className="hover:text-purple-400">Features</Link> */}
+              {/* <Link href="/pricing" className="hover:text-purple-400">Pricing</Link> */}
+              <LoginLink>
+                <Button variant="secondary" className="bg-blue-500 hover:bg-blue-700">Login</Button>
+              </LoginLink>
+            </div>
+          </nav>
+        </header>
 
-      {/* Features Section */}
-      <motion.section
-        className="py-20 px-4 bg-black"
-        variants={stagger}
-        initial="initial"
-        animate="animate"
-      >
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <FeatureCard
-            icon={Users}
-            title="Employee Management"
-            description="Easily manage your team, assign tasks, and track performance."
-            imageUrl="/placeholder.svg?height=200&width=200"
-          />
-          <FeatureCard
-            icon={ClipboardList}
-            title="Ticket Tracking"
-            description="Create, assign, and monitor repair tickets from start to finish."
-            imageUrl="/placeholder.svg?height=200&width=200"
-          />
-          <FeatureCard
-            icon={Wrench}
-            title="Repair Analytics"
-            description="Gain insights into your shop's performance with detailed analytics."
-            imageUrl="/placeholder.svg?height=200&width=200"
-          />
-        </div>
-      </motion.section>
+        {/* Hero Section */}
+        <section className="min-h-screen container flex justify-center items-center mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column */}
+            <div className="text-left">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Streamline Your Repair Shop Management
+              </h1>
+              <p className="text-xl text-gray-400 mb-8">
+                Efficiently manage employees, customers, and repair tickets with our comprehensive management solution.
+              </p>
+              <div className="flex gap-4">
+                <LoginLink>
+                  <Button size="lg" variant="secondary" className="bg-blue-500 hover:bg-blue-700">Get Started</Button>
+                </LoginLink>
+              </div>
+            </div>
 
-      {/* Call-to-Action Section */}
-      <motion.section
-        className="text-center py-20 px-4 bg-gradient-to-r from-black to-gray-900"
-        variants={fadeInUp}
-        initial="initial"
-        animate="animate"
-      >
-        <h2 className="text-3xl font-bold mb-4 text-white">Ready to Optimize Your Repair Shop?</h2>
-        <p className="text-xl mb-8 text-gray-300">Join TechFix Repairs and take your business to the next level</p>
-        <Button size="lg" className="bg-white text-black hover:bg-gray-200" asChild>
-          <LoginLink>Sign Up Now</LoginLink>
-        </Button>
-      </motion.section>
+            {/* Right Column */}
+            <div className="relative aspect-square lg:aspect-auto">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg" />
+              <div className="relative h-full min-h-[400px] w-full rounded-lg border border-white/10 bg-black/50 backdrop-blur p-8">
+                <div className="grid gap-6">
+                  {/* Ticket Example */}
+                  <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+                    <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <h3 className="font-semibold text-lg">Ticket #1234</h3>
+                        <p className="text-sm text-gray-400">S24 Ultra Screen Repair</p>
+                      </div>
+                      <Badge variant="outline" className="bg-yellow-500/10 text-yellow-500 border-yellow-500/50">In Progress</Badge>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-400">
+                      <Phone className="w-4 h-4 mr-2" />
+                      <span>Assigned to: Akhil Palsra</span>
+                    </div>
+                  </div>
 
-      {/* Footer */}
-      <motion.footer
-        className="text-center py-8 bg-black"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
-      >
-        <p className="text-white">&copy; 2024 TechFix Repairs. All rights reserved.</p>
-      </motion.footer>
+                  {/* Customer Example */}
+                  <div className="rounded-lg border border-white/10 bg-white/5 p-4">
+                    <div className="flex items-center gap-4 mb-4">
+                      <Avatar>
+                        <AvatarImage src="https://avatars.githubusercontent.com/u/71344171?v=4" />
+                        <AvatarFallback>SH</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <h3 className="font-semibold">Shivansh</h3>
+                        <p className="text-sm text-gray-400">Customer since 2022</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-400 mb-2">
+                      <Laptop className="w-4 h-4 mr-2" />
+                      <span>Last repair: MacBook Pro Battery Replacement</span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-400">
+                      <Badge variant="outline" className="bg-green-500/10 text-green-500 border-green-500/50">Loyal Customer</Badge>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Solutions Section */}
+        <section className="container mx-auto px-4 py-24">
+          <h2 className="text-3xl font-bold text-center mb-12">Our Solutions</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {solutions.map((solution) => (
+              <div
+                key={solution.title}
+                className="p-6 rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm hover:border-purple-500/50 transition-colors"
+              >
+                <solution.icon className="w-12 h-12 text-purple-400 mb-4" />
+                <h3 className="text-xl font-bold mb-2">{solution.title}</h3>
+                <p className="text-gray-400">{solution.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="border-t border-white/10 py-12">
+          <div className="container mx-auto px-4">
+            <div className="mt-12 pt-8 border-t border-white/10 text-center text-gray-400">
+              <p>&copy; 2024 TechFix Repair. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
   )
 }
+
+const solutions = [
+  {
+    title: "Ticket Management",
+    description: "Efficiently track and manage repair tickets from creation to completion.",
+    icon: ClipboardList,
+  },
+  {
+    title: "Customer Relations",
+    description: "Keep detailed customer records and improve engagement.",
+    icon: Users,
+  },
+  {
+    title: "Performance Analytics",
+    description: "Track repair shop metrics and employee performance.",
+    icon: BarChart,
+  },
+]
+
