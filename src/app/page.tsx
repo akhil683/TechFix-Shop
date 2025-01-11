@@ -14,14 +14,15 @@ export default function Home() {
         <header className="border-b border-white/10">
           <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <span className="text-xl font-bold">TechFix Repair</span>
+              <span className="text-xl font-bold">
+                TechFix Repair
+              </span>
             </div>
             <div className="flex items-center gap-4">
-              {/* <Link href="/about" className="hover:text-purple-400">About</Link> */}
-              {/* <Link href="/features" className="hover:text-purple-400">Features</Link> */}
-              {/* <Link href="/pricing" className="hover:text-purple-400">Pricing</Link> */}
               <LoginLink>
-                <Button variant="secondary" className="bg-blue-500 hover:bg-blue-700">Login</Button>
+                <Button variant="secondary" className="bg-blue-500 hover:bg-blue-700">
+                  Login
+                </Button>
               </LoginLink>
             </div>
           </nav>
@@ -32,10 +33,10 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column */}
             <div className="text-left">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Streamline Your Repair Shop Management
               </h1>
-              <p className="text-xl text-gray-400 mb-8">
+              <p className="md:text-xl text-gray-400 mb-8">
                 Efficiently manage employees, customers, and repair tickets with our comprehensive management solution.
               </p>
               <div className="flex gap-4">
@@ -54,10 +55,16 @@ export default function Home() {
                   <div className="rounded-lg border border-white/10 bg-white/5 p-4">
                     <div className="flex justify-between items-start mb-4">
                       <div>
-                        <h3 className="font-semibold text-lg">Ticket #1234</h3>
-                        <p className="text-sm text-gray-400">S24 Ultra Screen Repair</p>
+                        <h3 className="font-semibold text-lg">
+                          Ticket #1234
+                        </h3>
+                        <p className="text-sm text-gray-400">
+                          S24 Ultra Screen Repair
+                        </p>
                       </div>
-                      <Badge variant="outline" className="bg-yellow-500/10 text-yellow-500 border-yellow-500/50">In Progress</Badge>
+                      <Badge variant="outline" className="bg-yellow-500/10 text-yellow-500 border-yellow-500/50">
+                        In Progress
+                      </Badge>
                     </div>
                     <div className="flex items-center text-sm text-gray-400">
                       <Phone className="w-4 h-4 mr-2" />
@@ -79,10 +86,14 @@ export default function Home() {
                     </div>
                     <div className="flex items-center text-sm text-gray-400 mb-2">
                       <Laptop className="w-4 h-4 mr-2" />
-                      <span>Last repair: MacBook Pro Battery Replacement</span>
+                      <span>
+                        Last repair: MacBook Pro Battery Replacement
+                      </span>
                     </div>
                     <div className="flex items-center text-sm text-gray-400">
-                      <Badge variant="outline" className="bg-green-500/10 text-green-500 border-green-500/50">Loyal Customer</Badge>
+                      <Badge variant="outline" className="bg-green-500/10 text-green-500 border-green-500/50">
+                        Loyal Customer
+                      </Badge>
                     </div>
                   </div>
                 </div>
@@ -101,8 +112,12 @@ export default function Home() {
                 className="p-6 rounded-lg border border-white/10 bg-white/5 backdrop-blur-sm hover:border-purple-500/50 transition-colors"
               >
                 <solution.icon className="w-12 h-12 text-purple-400 mb-4" />
-                <h3 className="text-xl font-bold mb-2">{solution.title}</h3>
-                <p className="text-gray-400">{solution.description}</p>
+                <h3 className="text-xl font-bold mb-2">
+                  {solution.title}
+                </h3>
+                <p className="text-gray-400">
+                  {solution.description}
+                </p>
               </div>
             ))}
           </div>
