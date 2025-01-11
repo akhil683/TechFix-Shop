@@ -95,7 +95,7 @@ DATABASE_URL=
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/akhil683/TechFix-Shop.git
-   cd techfix-repari
+   cd TechFix-Shop
    ```
 
 2. **Install Dependencies**:
@@ -124,14 +124,3 @@ DATABASE_URL=
 ## Contributing
 Contributions are welcome! Feel free to open issues or submit pull requests to enhance the functionality of this project.
 
----
-
-## Acknowledgements
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Kinde Auth](https://kinde.com/)
-- [Drizzle ORM](https://github.com/drizzle-team/drizzle-orm)
-- [TanStack Table](https://tanstack.com/table)
-- [Shadcn UI](https://shadcn.dev/)
-- [Framer Motion](https://www.framer.com/motion/)
- 
