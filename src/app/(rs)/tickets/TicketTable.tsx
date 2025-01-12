@@ -170,7 +170,7 @@ export default function TicketTable({ data }: Props) {
   return (
     <div className="mt-6 flex flex-col gap-4">
       <div className="rounded-lg overflow-hidden border border-border">
-        <Table className="border">
+        <Table className="border bg-gray-950">
 
           {/* Table Header */}
           <TableHeader>
@@ -209,11 +209,11 @@ export default function TicketTable({ data }: Props) {
               // Table Row
               <TableRow
                 key={row.id}
-                className="cursor-pointer hover:bg-border/25 dark:hover:bg-ring/40"
+                className="text-gray-200 cursor-pointer hover:bg-border/25 dark:hover:bg-gray-700/40"
                 onClick={() => router.push(`/tickets/form?ticketId=${row.original.id}`)}
               >
                 {row.getVisibleCells().map((cell) => (
-                  <TableCell key={cell.id} className="border">
+                  <TableCell key={cell.id} className="border py-3 md:py-4">
                     {/* Render each cell data */}
                     {flexRender(
                       cell.column.columnDef.cell,

@@ -31,7 +31,6 @@ TechFix Repair is a web application designed to help repair shops efficiently ma
 ### Form Handling
 - **Validation**: Implemented with [Zod](https://zod.dev/) and [React Hook Form](https://react-hook-form.com/).
 - User-friendly and secure form submission process.
-![Display Form](/public/readme/edit.png)
 
 ### Database Interaction
 - **ORM**: [Drizzle ORM](https://github.com/drizzle-team/drizzle-orm) for database operations.

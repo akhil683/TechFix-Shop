@@ -104,55 +104,57 @@ export default function CustomerTable({ data }: Props) {
   })
 
   return (
-    <div className="mt-6 rounded-lg overflow-hidden border border-border">
-      <Table className="border">
+    <div className="mt-6 flex flex-col gap-4">
+      <div className="rounded-lg overflow-hidden border border-border">
+        <Table className="border bg-gray-950">
 
-        {/* Table Header */}
-        <TableHeader>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow key={headerGroup.id}>
-              {headerGroup.headers.map(header => (
-                <TableHead key={header.id}>
-                  <div>
-                    {/* Render each header cell */}
-                    {header.isPlaceholder
-                      ? null
-                      : flexRender(
-                        header.column.columnDef.header,
-                        header.getContext()
-                      )}
-                  </div>
-                </TableHead>
-              ))}
-            </TableRow>
-          ))}
-        </TableHeader>
+          {/* Table Header */}
+          <TableHeader>
+            {table.getHeaderGroups().map((headerGroup) => (
+              <TableRow key={headerGroup.id}>
+                {headerGroup.headers.map(header => (
+                  <TableHead key={header.id}>
+                    <div>
+                      {/* Render each header cell */}
+                      {header.isPlaceholder
+                        ? null
+                        : flexRender(
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
+                    </div>
+                  </TableHead>
+                ))}
+              </TableRow>
+            ))}
+          </TableHeader>
 
-        {/* Table Body */}
-        <TableBody>
-          {table.getRowModel().rows.map((row) => (
+          {/* Table Body */}
+          <TableBody>
+            {table.getRowModel().rows.map((row) => (
 
-            // Table Row
-            <TableRow
-              key={row.id}
-              className="cursor-pointer hover:bg-border/25 dark:hover:bg-ring/40"
-            >
-              {row.getVisibleCells().map((cell) => (
-                <TableCell key={cell.id} className="border">
-                  {/* Render each cell data */}
-                  {flexRender(
-                    cell.column.columnDef.cell,
-                    cell.getContext()
-                  )}
-                </TableCell>
-              ))}
-            </TableRow>
+              // Table Row
+              <TableRow
+                key={row.id}
+                className="cursor-pointer hover:bg-border/25 dark:hover:bg-gray-700/40"
+              >
+                {row.getVisibleCells().map((cell) => (
+                  <TableCell key={cell.id} className="border md:py-4 py-3">
+                    {/* Render each cell data */}
+                    {flexRender(
+                      cell.column.columnDef.cell,
+                      cell.getContext()
+                    )}
+                  </TableCell>
+                ))}
+              </TableRow>
 
-          ))}
-        </TableBody>
+            ))}
+          </TableBody>
 
-      </Table>
-    </div >
+        </Table>
+      </div >
+    </div>
   )
 }
 

@@ -12,7 +12,7 @@ export default async function RSLayout({
         {/* header */}
         <Header />
         <Sidebar />
-        <div className="px-4 py-2 mt-6">{children}</div>
+        <div className="px-4 py-2 mt-6 w-full">{children}</div>
       </div>
     </>
   );
