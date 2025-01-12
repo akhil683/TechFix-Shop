@@ -8,7 +8,7 @@ import { NavButtonMenu } from "./NavButtonMenu";
 
 export default function Header() {
   return (
-    <header className="bg-background h-12 p-2 border-b sticky top-0 z-50">
+    <header className="md:hidden bg-background h-12 p-2 border-b sticky top-0 z-50">
       <div className="flex h-8 items-center justify-between w-full">
         <div className="flex items-center justice gap-2">
           <NavButton href="/" label="Home" icon={HomeIcon} />

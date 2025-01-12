@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Sidebar from "@/components/Sidebar";
 
 export default async function RSLayout({
   children,
@@ -6,10 +7,13 @@ export default async function RSLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="mx-auto w-full max-w-7xl">
-      {/* header */}
-      <Header />
-      <div className="px-4 py-2">{children}</div>
-    </div>
+    <>
+      <div className="md:flex md:gap-6 max-md:mx-auto w-full">
+        {/* header */}
+        <Header />
+        <Sidebar />
+        <div className="px-4 py-2 mt-6">{children}</div>
+      </div>
+    </>
   );
 }
